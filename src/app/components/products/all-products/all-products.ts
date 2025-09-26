@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { IProduct } from '../../../interfaces/iproduct';
-import { Product } from '../../../services/product';
+import { IProduct } from '../../../_interfaces/iproduct';
+import { Product } from '../../../_services/product';
 import { RouterLink } from '@angular/router';
 import { ProductCard } from '../prodct-card/prodct-card';
 

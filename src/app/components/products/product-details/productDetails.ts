@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { Product } from '../../../services/product';
+import { Product } from '../../../_services/product';
 import { ActivatedRoute } from '@angular/router';
-import { IProduct } from '../../../interfaces/iproduct';
+import { IProduct } from '../../../_interfaces/iproduct';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, switchMap } from 'rxjs/operators';
-import { Shadow } from "../../../directives/shadow";
+import { Shadow } from "../../../_directives/shadow";
 
 @Component({
   selector: 'app-product',

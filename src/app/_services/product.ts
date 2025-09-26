@@ -1,5 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { IProduct } from '../interfaces/iproduct';
+import { IProduct } from '../_interfaces/iproduct';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 
@@ -29,7 +29,7 @@ export class Product {
         this.ProductsSignal.set(productsArray);
       });
 
-    
+
   }
 
   getAllProducts() {
@@ -37,6 +37,6 @@ export class Product {
   }
 
   getProduct(id: number): Observable<IProduct> {
-  return this.http.get<IProduct>(`https://dummyjson.com/products/${id}`);
-}
+    return this.http.get<IProduct>(`https://dummyjson.com/products/${id}`);
+  }
 }

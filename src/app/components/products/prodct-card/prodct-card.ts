@@ -1,8 +1,8 @@
 import { Component, inject, input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { IProduct } from '../../../interfaces/iproduct';
+import { IProduct } from '../../../_interfaces/iproduct';
 import { CurrencyPipe } from '@angular/common';
-import { ExcerptPipe } from '../../../pipes/excerpt-pipe';
+import { ExcerptPipe } from '../../../_pipes/excerpt-pipe';
 
 @Component({
   selector: 'app-prodct-card',
