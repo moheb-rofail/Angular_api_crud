@@ -1,0 +1,19 @@
+<div class="row gy-4">
+    @for(product of products(); track product.id){
+    <div class="col-3">
+        <div class="card h-100">
+            <img class="card-img-top" src="{{product.thumbnail}}" alt="Card image cap">
+            <div class="card-body">
+                <a [routerLink]="['/product/', product.id]">
+                    <h5 class="card-title">{{product.title}}</h5>
+                </a>
+                <p class="card-text">{{product.description}}</p>
+            </div>
+            <div class="card-body">
+                <a href="#" class="card-link">Add to Cart</a>
+                <a [routerLink]="['/product/', product.id]" class="card-link">View</a>
+            </div>
+        </div>
+    </div>
+    }
+</div>
