@@ -1,0 +1,13 @@
+<div class="card h-100">
+    <img class="card-img-top" src="{{product()?.thumbnail}}" alt="Card image cap">
+    <div class="card-body">
+        <a [routerLink]="['/product/', product()?.id]">
+            <h5 class="card-title">{{product()?.title}}</h5>
+        </a>
+        <p class="card-text">{{product()?.description | excerpt}}</p>
+        <span>{{product()?.price | currency : 'USD' }}</span>
+    </div>
+    <div class="card-body">
+        <input type="button" value="view Product" (click)="go2Product(product()?.id)" class="btn btn-primary" />
+    </div>
+</div>

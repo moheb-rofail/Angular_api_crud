@@ -4,11 +4,12 @@ import { ActivatedRoute } from '@angular/router';
 import { IProduct } from '../../../interfaces/iproduct';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, switchMap } from 'rxjs/operators';
+import { Shadow } from "../../../directives/shadow";
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [Shadow],
   templateUrl: './product-details.html',
   styleUrls: ['./product-details.css']
 })
