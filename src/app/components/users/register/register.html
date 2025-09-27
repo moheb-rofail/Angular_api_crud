@@ -18,10 +18,10 @@
         }
     </div>
     <div class="form-group">
-        <label for="imageURL">imageURL</label>
-        <input type="url" id="imageURL" formControlName="imageURL" class="form-control"/>
-        @if(imageURL?.invalid && (imageURL?.touched || imageURL?.dirty)){
-            @for (error of imageURL.errors | keyvalue; track error.key) {
+        <label for="image">image</label>
+        <input type="url" id="image" formControlName="image" class="form-control"/>
+        @if(image?.invalid && (image?.touched || image?.dirty)){
+            @for (error of image.errors | keyvalue; track error.key) {
                 <div class="alert alert-danger">{{ error.key }}: {{ error.value | json }}</div>
             }
         }
@@ -59,8 +59,8 @@
             <input type="text" id="city" formControlName="city" class="form-control" />
         </div>
         <div class="form-group">
-            <label for="street">Street</label>
-            <input type="text" id="street" formControlName="street" class="form-control" />
+            <label for="state">state</label>
+            <input type="text" id="state" formControlName="state" class="form-control" />
         </div>
     </div>
     <input type="submit" class="btn btn-success" value="Submit" [disabled]="regForm.invalid" />

@@ -1,0 +1,24 @@
+<table class="table table-bordered">
+    @if(!user) {
+    <h2>No User Logged In</h2>
+    }
+    @else {
+        <h2>Logged In User Details:</h2>
+        <tr>
+            <th>Image</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td><img [src]="user.image" alt="" style="width: 100px;"></td>
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.address.city}} {{user.address.state}}</td>
+        </tr>
+    }
+</table>

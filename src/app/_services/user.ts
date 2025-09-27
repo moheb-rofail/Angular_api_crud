@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable, Signal, signal } from '@angular/core';
 import { IUser } from '../_interfaces/user';
 import { map, Observable } from 'rxjs';
 
@@ -44,5 +44,14 @@ export class User {
       }
     }
     return false;
+  }
+
+  registeredUserSignal = signal<IUser | undefined>(undefined);
+
+  register(newUser: IUser) {
+    newUser.id = this.getAllUsers()().length + 1;
+    if (this.registeredUserSignal() === undefined) {
+      this.registeredUserSignal.set(newUser);
+    }
   }
 }

@@ -12,6 +12,7 @@ export const routes: Routes = [
     {path: 'products', component:AllProducts},
 
     // this is a lazy loading path
+    {path: 'profile', loadComponent:()=> import('./components/users/single-user/single-user').then((c)=> c.SingleUser)},
     {path: 'login', loadComponent:()=> import('./components/users/login/login').then((c)=> c.Login)},
     {path: 'register', loadComponent:()=> import('./components/users/register/register').then((c)=> c.Register)},
 

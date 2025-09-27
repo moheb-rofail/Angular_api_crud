@@ -18,7 +18,6 @@ interface ProductApiResponse {
 export class Product {
   http = inject(HttpClient);
   private ProductsSignal = signal<IProduct[]>([]);
-  private productSignal = signal<IProduct | undefined>(undefined)
 
   constructor() {
     this.http
@@ -28,8 +27,6 @@ export class Product {
       ).subscribe((productsArray) => {
         this.ProductsSignal.set(productsArray);
       });
-
-
   }
 
   getAllProducts() {
